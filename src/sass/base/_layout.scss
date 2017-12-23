@@ -1,8 +1,8 @@
 #app {
   @supports (display: grid) {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
   }
 }
 
