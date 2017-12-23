@@ -4,11 +4,10 @@
   "description": "Hugo theme for https://tilde.town/~resir014",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:css",
-    "build:css": "node-sass-chokidar --include-path src/sass src/sass/app.scss --output static/css --output-style compressed",
-    "precommit": "npm run build && git add static/css/app.css",
+    "build": "brunch build --production",
+    "precommit": "npm run build && git add \"static/**/*\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "node-sass-chokidar --include-path src/sass src/sass/app.scss --output static/css --output-style compressed --watch src/sass/**/*.scss"
+    "watch": "brunch watch"
   },
   "repository": {
     "type": "git",
@@ -21,7 +20,20 @@
   },
   "homepage": "https://github.com/resir014/resir014-tilde-theme#readme",
   "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "babel-brunch": "^6.1.1",
+    "babel-preset-env": "^1.6.1",
+    "brunch": "^2.10.12",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
     "husky": "^0.14.3",
-    "node-sass-chokidar": "^0.0.3"
+    "node-sass-chokidar": "^0.0.3",
+    "postcss-brunch": "^2.1.0",
+    "sass-brunch": "^2.10.4",
+    "uglify-js-brunch": "^2.10.0"
   }
 }
