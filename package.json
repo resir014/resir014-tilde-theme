@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build:css",
-    "build:css": "node-sass-chokidar src/sass/app.scss --output static/css --output-style compressed",
+    "build:css": "node-sass-chokidar --include-path src/sass src/sass/app.scss --output static/css --output-style compressed",
     "precommit": "npm run build && git add static/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "node-sass-chokidar src/sass/app.scss --watch src/sass/**/*.scss --output static/css --output-style compressed"
+    "watch": "node-sass-chokidar --include-path src/sass src/sass/app.scss --output static/css --output-style compressed --watch src/sass/**/*.scss"
   },
   "repository": {
     "type": "git",
