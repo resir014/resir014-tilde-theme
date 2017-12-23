@@ -1,0 +1,10 @@
+header {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  color: $white;
+
+  @supports (display: grid) {
+      grid-column: span 12;
+  }
+}

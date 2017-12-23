@@ -1,0 +1,27 @@
+{
+  "name": "resir014-tilde-theme",
+  "version": "1.0.0",
+  "description": "Hugo theme for https://tilde.town/~resir014",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": "node-sass-chokidar src/sass/app.scss --output static/css --output-style compressed",
+    "precommit": "npm run build && git add static/css/app.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node-sass-chokidar src/sass/app.scss --watch src/sass/**/*.scss --output static/css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resir014/resir014-tilde-theme.git"
+  },
+  "author": "Resi Respati <resir014@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/resir014/resir014-tilde-theme/issues"
+  },
+  "homepage": "https://github.com/resir014/resir014-tilde-theme#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "node-sass-chokidar": "^0.0.3"
+  }
+}
